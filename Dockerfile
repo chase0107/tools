@@ -13,7 +13,7 @@ RUN echo "KUBECTL_VERSION: ${KUBECTL_VERSION}" \
 RUN curl -L https://github.com/kubernetes-sigs/kustomize/releases/download/v${KUSTOMIZE_VER}/kustomize_${KUSTOMIZE_VER}_linux_amd64  -o /usr/bin/kustomize \
     && chmod +x /usr/bin/kustomize
 
-RUN curl -o aws-iam-authenticator https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/aws-iam-authenticator -o /usr/bin/aws-iam-authenticator \
+RUN curl -L https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/aws-iam-authenticator -o /usr/bin/aws-iam-authenticator \
     && chmod +x /usr/bin/aws-iam-authenticator \
     && export PATH=$PATH:$HOME/bin \
     && echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
