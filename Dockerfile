@@ -11,7 +11,7 @@ RUN apk add --no-cache \
 RUN aws --version   # Just to make sure its installed alright
 
 ARG KUBECTL_VERSION=1.20.5
-ARG KUSTOMIZE_VER=3.8.7
+ARG KUSTOMIZE_VER=2.0.3
 
 RUN apk add --no-cache --update curl ca-certificates
 
